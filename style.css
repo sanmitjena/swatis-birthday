@@ -1,0 +1,141 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(to right, #ffd6e8, #d4bfff);
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+  
+  .container {
+    background: white;
+    padding: 2rem;
+    border-radius: 20px;
+    text-align: center;
+    max-width: 400px;
+    margin: 8rem auto;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 1.5s ease-in-out;
+  }
+  
+  h1 {
+    color: #e60073;
+    font-size: 2em;
+    margin-bottom: 1rem;
+  }
+  
+  .photo {
+    width: 100%;
+    border-radius: 15px;
+    margin-bottom: 1rem;
+    object-fit: cover;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  p {
+    font-size: 1rem;
+    color: #444;
+    margin-bottom: 1.5rem;
+  }
+  
+  audio {
+    width: 100%;
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  .popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.6);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+  }
+  
+  .popup-content {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 20px;
+    text-align: center;
+    max-width: 300px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    animation: fadeIn 1s ease;
+  }
+  
+  .popup-content h2 {
+    color: #e60073;
+    margin-bottom: 1rem;
+  }
+  
+  .popup-content button {
+    background: #e60073;
+    color: white;
+    border: none;
+    padding: 0.6rem 1.2rem;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+  }
+  
+  /* Balloons */
+  .balloons {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 0;
+  }
+  
+  .balloon {
+    width: 30px;
+    height: 40px;
+    border-radius: 50%;
+    position: absolute;
+    animation: float 6s ease-in infinite;
+  }
+  
+  .balloon::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    width: 2px;
+    height: 20px;
+    background: #444;
+    transform: translateX(-50%);
+  }
+  
+  .balloon.red { background: #ff4d4d; left: 10%; animation-delay: 0s; }
+  .balloon.blue { background: #4d94ff; left: 30%; animation-delay: 1s; }
+  .balloon.green { background: #33cc33; left: 60%; animation-delay: 2s; }
+  .balloon.yellow { background: #ffff66; left: 80%; animation-delay: 3s; }
+  
+  @keyframes float {
+    0% { bottom: -50px; }
+    100% { bottom: 100%; }
+  }
+  
+  /* Birthday Banner */
+  .banner {
+    text-align: center;
+    background: #ff99cc;
+    padding: 1rem;
+    font-size: 1.5rem;
+    color: white;
+    font-weight: bold;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 999;
+  }
+  

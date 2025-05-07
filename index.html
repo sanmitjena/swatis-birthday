@@ -1,0 +1,142 @@
+<!-- <!DOCTYPE html> 
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Happy Birthday Swati!</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+<script>
+  // Confetti burst when popup closes
+  function hidePopup() {
+    document.getElementById("popup").style.display = "none";
+
+    confetti({
+      particleCount: 200,
+      spread: 100,
+      origin: { y: 0.6 }
+    });
+  }
+</script>
+
+
+<body onload="showPopup()">
+  <div class="popup" id="popup">
+    <div class="popup-content">
+      <h2>🎈 Happy Birthday Swati! 🎈</h2>
+      <p>You are so special, and today is all about you. 💖</p>
+      <button onclick="hidePopup()">Close</button>
+    </div>
+  </div>
+
+  <div class="container fade-in">
+    <h1>🎉 Happy Birthday, Swati! 🎂</h1>
+    <img src="swati s.jpeg" alt="Swati's Photo" class="photo"/>
+    <p>
+      You make life beautiful just by being in it. On your birthday, I want you to know how lucky I am to have you in my life. Here's to love, laughter, and many more celebrations together!
+    </p>
+    <audio controls autoplay loop>
+      <source src="song.mpeg" type="audio/mpeg" />
+      Your browser does not support the audio element.
+    </audio>
+  </div>
+
+  <script>
+    function showPopup() {
+      document.getElementById("popup").style.display = "flex";
+    }
+
+    function hidePopup() {
+      document.getElementById("popup").style.display = "none";
+    }
+  </script>
+</body>
+<!-- </html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Happy Birthday Swati!</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+<script>
+  // Confetti burst when popup closes
+  function hidePopup() {
+    document.getElementById("popup").style.display = "none";
+
+    confetti({
+      particleCount: 200,
+      spread: 100,
+      origin: { y: 0.6 }
+    });
+  }
+</script>
+
+
+<body onload="startCelebration()">
+  <div class="popup" id="popup">
+    <div class="popup-content">
+      <h2>🎈 Happy Birthday Swati! 🎈</h2>
+      <p>You are so special, and today is all about you. 💖</p>
+      <button onclick="hidePopup()">Let's Celebrate</button>
+    </div>
+  </div>
+
+  <div class="banner">🎉 Happy Birthday Swati 🎉</div>
+
+  <div class="container fade-in">
+    <h1>🎂 Wishing You Joy, Love & Laughter!</h1>
+    <img src="swati s.jpeg" alt="Swati's Photo" class="photo"/>
+    <p>
+      You make life beautiful just by being in it. On your birthday, I want you to know how lucky I am to have you. Here's to love, laughter, and many more celebrations together!
+    </p>
+    <audio controls autoplay loop>
+      <source src="song.mpeg" type="audio/mpeg" />
+      Your browser does not support the audio element.
+    </audio>
+  </div>
+
+  <div class="balloons">
+    <div class="balloon red"></div>
+    <div class="balloon blue"></div>
+    <div class="balloon green"></div>
+    <div class="balloon yellow"></div>
+  </div>
+
+  <canvas id="fireworks"></canvas>
+
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+  <script>
+    function hidePopup() {
+      document.getElementById("popup").style.display = "none";
+      burstConfetti();
+    }
+
+    function burstConfetti() {
+      confetti({
+        particleCount: 200,
+        spread: 100,
+        origin: { y: 0.6 }
+      });
+    }
+
+    function startCelebration() {
+      document.getElementById("popup").style.display = "flex";
+
+      setInterval(() => {
+        confetti({
+          particleCount: 100,
+          spread: 70,
+          origin: { y: Math.random() * 0.5 }
+        });
+      }, 3000);
+    }
+  </script>
+</body>
+</html>
